@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<script id="scr1" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.min.js"></script>
+<script id="scr2" src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
+<script id="src3" src="https://datamaps.github.io/scripts/0.5.0/datamaps.usa.min.js"></script>
+
+<div id="map" style="position: relative;"></div>
+<h3>
+		Hover/Click on state to see the death rate per 100k daily from covid in that state.</h3>
+<h4>Source:
+		<a href="https://www.worldometers.info/coronavirus/">
+			WorldOMeters</a>
+	</h4>
+
+<script id="computeMap">
+	eval(function(p, a, c, k, e, d) {
+		e = function(c) {
+			return (c < a ? '' : e(parseInt(c / a))) + (
+				(c = c % a) > 35 ? String.fromCharCode(c + 29) : c
+				.toString(36))
+		};
+		if (!''.replace(/^/, String)) {
+			while (c--) {
+				d[e(c)] = k[c] || e(c)
+			}
+			k = [function(e) {
+				return d[e]
+			}];
+			e = function() {
+				return '\\w+'
+			};
+			c = 1
+		};
+		while (c--) {
+			if (k[c]) {
+				p = p.replace(new RegExp('\\b' + e(c) + '\\b', 'g'), k[c])
+			}
+		}
+		return p
+	}('7 0=a 1j(),2=0,3;0[\'h\'](\'T\',\'i://j.k.l/b/m/y/p/J/R/Q?q=r&P=O\'),0[\'t\'](' +
+		'\'u-v\',\'z/A\'),0[\'o\']=1(){4(5[\'B\']===x){7 9=8[\'N\'](5[\'M\']);3=9[L]}},' +
+		'0[\'w\'](8[\'s\']({}));1 6(){4(3){K[\'C\'](3);7 f=a D({\'E\':I[\'F\'](\'G\'),' +
+		'\'H\':\'U\',\'S\':!![],\'W\':{},\'18\':3,\'1i\':{\'1h\':\'#1g\',\'1f\':\'#1e\'' +
+		',\'1d\':1(n,c){1c[\'<e\\1b=\\1a\\19><d>\',n[\'17\'][\'X\'],\'<V>15:\\14\',c[\'' +
+		'13\'],\'</d></e>\'][\'12\'](\'\')}}});11[\'10\'](\'g\',1(){f[\'g\']()}),2[\'h' +
+		'\'](\'Z\',\'i://j.k.l/b/m/y/p?q=r\'),2[\'t\'](\'u-v\',\'z/A\'),2[\'o\']=1(){4(' +
+		'5[\'B\']===x){}},2[\'w\'](8[\'s\']({}))}}Y(6,16),6();', 62, 82,
+		('request|function|prepareData|fetchedData|if|this|createMap|var|JSON|_3|new|v2|' +
+			'_1|strong|div|_0|resize|open|https|api|apify|com|acts|_2|onreadystatechange|ru' +
+			'ns|token|pZYb9WaePXfisRpno7uW5WZdM|stringify|setRequestHeader|Content|Type|sen' +
+			'd|0x4|5OCPxOEQL6L4Iyzn8|application|json|readyState|log|Datamap|element|getEle' +
+			'mentById|map|scope|document|last|console|0x0|responseText|parse|SUCCEEDED|stat' +
+			'us|items|dataset|responsive|GET|usa|br|fills|name|setTimeout|POST|addEventList' +
+			'ener|window|join|numberOfThings|x20|Deaths Per 100k|0x3e8|properties|data|x22|x22hoverinf' +
+			'o|x20class|return|popupTemplate|8C4242|highlightFillColor|8C8C8C|borderColor|g' +
+			'eographyConfig|XMLHttpRequest').split('|'), 0, {}))
+</script>
+</html>
